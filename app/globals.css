@@ -18,16 +18,25 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #212628;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+@media only screen and (min-device-pixel-ration: 2),
+only screen and (min-resolution: 192dpi) {
+  main {
+    zoom: 80%;
+    min-height: 125vh;
   }
 }
