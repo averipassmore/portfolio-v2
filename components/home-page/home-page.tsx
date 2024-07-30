@@ -5,7 +5,8 @@ import {
   Typer,
   SkillPill,
   TechnologyPill,
-  ParticleCanvas 
+  ExperiencePage
+  // ParticleCanvas 
 } from '@/components';
 import { NavItem, SkillItem, ParticleOptions } from '@/types';
 
@@ -131,7 +132,7 @@ const HomePage = () => {
   return (
     <div className='w-full h-full bg-[#212628] flex flex-col items-center'>
       <NavBar navItems={navItems} navIconSrc={'/anpLogo.png'} />
-      <div className='flex justify-between max-w-[1600px] w-full flex-wrap p-[120px]'>
+      <div className='flex max-w-[1600px] w-full flex-wrap p-[120px] gap-[64px] b-'>
         <div className='flex flex-col gap-[60px] w-[750px] min-w-[750px]'>
           <div className='flex gap-[12px] font-semibold text-[57px]'>
             <span className='text-[#c4c4c4]'>{`// `}</span><Typer contents={titles} />
@@ -170,7 +171,7 @@ const HomePage = () => {
             iconAlt='arrow down'
           />
         </div>
-        <div className='flex flex-col justify-center max-w-[40%] items-center gap-[24px]'>
+        <div className='flex flex-col justify-center max-w-[40%] min-w-[498px] items-center gap-[24px]'>
           <div className='flex flex-wrap gap-[24px]'>
             <TechnologyPill item={technologies[0]} />
             <TechnologyPill item={technologies[1]} />
@@ -191,6 +192,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <ExperiencePage />
       {/* <ParticleCanvas options={particleOptions}/> */}
     </div>
   )
